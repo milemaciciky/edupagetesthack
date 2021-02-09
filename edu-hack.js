@@ -1,6 +1,11 @@
 materialObj.getAllAnswerWidgets().forEach(function (otazka) {
   if (otazka.getWidgetClass() == "AbcdAnswerETestWidget") {
     var odpovede = otazka.alist[0];
+    
+    if (odpovede == undefined) {
+      return;
+    }
+
     var spravne_odpovede = otazka.props.correctAnswers
     for (answerid = 0; answerid < otazka.maxAnswerId; answerid++) {
       if (odpovede.children[answerid] == undefined) continue;
