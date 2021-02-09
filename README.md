@@ -10,11 +10,12 @@ Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi
 - Prilep
 
 ### Firefox
-POZOR: Doplnok stále čaká na overenie, prosím použi návod pre chrome.
-- Stiahni si [doplnok](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
-- Otvor edupage test
-- Klikni na Edupage ikonu medzi rozšíreniami (väčšinou v pravom hornom rohu)
-Pozor: ak je test viac-stránkový, musíš na ikonu kliknúť na každej strane.
+- Stiahni si dopnok z zo [stránky](https://github.com/ivanhrabcak/EduPageTestHack/releases/)
+- Pokračuj v inštalácií v ľavom hornom rohu
+- Otvor Edupage test
+- Klikni na Edupage ikonu medzi doplnkami
+
+Pozor: ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
 
 ### Ako otvoriť konzolu
 Klikni pravým tlačidlom myši a stlač Inspect element/Preskúmať prvok alebo jednoducšie stlač `F12` na klávesnici (pre Operu je to `Ctrl + Shift + I`). Ak ešte nie si v konzole, tak sa tam preklikni.
