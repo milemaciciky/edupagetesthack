@@ -1,0 +1,24 @@
+{
+    "name": "EduPageTestHack",
+    "version": "1.0",
+    "description": "Get test answers easily",
+    "web_accessible_resources": [
+        "src/edu-hack.js"
+    ],
+    "icons": {
+        "48": "icons/48.jpg"
+    },
+    "browser_action": {
+        "default_title": "test",
+        "default_icon": "icons/48.jpg",
+        "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.edupage.org/*"],
+            "js": ["src/content-script.js"]
+        }
+    ],
+    "permissions": ["*://*/edupage.org/*", "tabs"],
+    "manifest_version": 2
+  }
