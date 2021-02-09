@@ -10,6 +10,7 @@ Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi
 - Prilep
 
 ### Firefox
+POZOR: Doplnok stále čaká na overenie, prosím použi návod pre chrome.
 - Stiahni si [doplnok](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
 - Otvor edupage test
 - Klikni na Edupage ikonu medzi rozšíreniami (väčšinou v pravom hornom rohu)
