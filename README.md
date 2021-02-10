@@ -14,7 +14,10 @@ Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi
 - Otvor test
 - Klikni na ikonu doplnku Edupage
 
-Pozor: ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
+
+Pozor: 
+- ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
+- priecinok s kodom nevymazavaj! 
 
 ### Firefox
 - Stiahni si dopnok zo [stránky](https://github.com/ivanhrabcak/EduPageTestHack/releases/)
