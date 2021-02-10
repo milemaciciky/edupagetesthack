@@ -20,7 +20,7 @@ Pozor:
 - priecinok s kodom nevymazavaj! 
 
 ### Firefox
-- Stiahni si dopnok zo [stránky](https://github.com/ivanhrabcak/EduPageTestHack/releases/)
+- Stiahni si [doplnok](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
 - Pokračuj v inštalácií v ľavom hornom rohu
 - Otvor Edupage test
 - Klikni na Edupage ikonu medzi doplnkami
