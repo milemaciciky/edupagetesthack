@@ -1,7 +1,7 @@
 # EduPageTestHack
 Hack na správne odpovede
 
-# TENTO HACK UŽ NEFUNGUJE A BUDE ARCHIVOVANÝ
+## Status
 Bug, na ktorom tento hack fungoval bol patchnutý. Tento hack viac nefunguje.
 
 ## Iný spôsob
