@@ -26,4 +26,4 @@ Pozor:
 Pozor: ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
 
 ## Bugs
-Ak doplnok nefunguje, nahlás všetky problémy na stránke [Issues](https://github.com/markotomcik/EduPageTestHack/issues)
+Ak doplnok nefunguje, nahlás všetky problémy na stránke [Issues](https://github.com/markotomcik/EduPageTestHack/issues/new/choose)
