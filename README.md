@@ -4,16 +4,14 @@ Hack na správne odpovede
 ## Použite
 ### Chrome
 Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi tento návod: 
-- Stiahni si kod tohto doplnku
 - V novom tabe si otvor 'chrome://extensions'
 - V pravom hornom rohu zapni Developer Mode
-- Stiahni si [kod doplnku](https://github.com/ivanhrabcak/EduPageTestAnswers/archive/main.zip)
-- Zip subor s kodom extrahuj na nejake miesto
-- V chrome vyber 'Load Unpacked' (v lavom hornom rohu)
-- Vyber priecinok kde si extrahoval kod doplnku
-- Otvor test
+- Stiahni si [kód doplnku](https://github.com/ivanhrabcak/EduPageTestAnswers/archive/main.zip)
+- Zip súbor s kódom extrahuj na nejaké miesto na disku
+- V chrome vyber 'Load Unpacked' (v ľavom hornom rohu)
+- Vyber priečinok kde si extrahoval kód doplnku
+- Otvor test na Edupage
 - Klikni na ikonu doplnku Edupage
-
 
 Pozor: 
 - ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
@@ -27,8 +25,5 @@ Pozor:
 
 Pozor: ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
 
-### Ako otvoriť konzolu
-Klikni pravým tlačidlom myši a stlač Inspect element/Preskúmať prvok alebo jednoducšie stlač `F12` na klávesnici (pre Operu je to `Ctrl + Shift + I`). Ak ešte nie si v konzole, tak sa tam preklikni.
-
 ## Bugs
-Ak doplnok nefunguje, nahlás všetky problémy na stránke [Issues](https://github.com/ivanhrabcak/EduPageTestHack/issues)
+Ak doplnok nefunguje, nahlás všetky problémy na stránke [Issues](https://github.com/markotomcik/EduPageTestHack/issues)
