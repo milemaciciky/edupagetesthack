@@ -1,30 +1,6 @@
 # EduPageTestHack
 Hack na správne odpovede
 
-## Status
-Bug, na ktorom tento hack fungoval bol patchnutý. Tento hack viac nefunguje.
-
-## Iný spôsob
-K dispozícii som mal ak iný kód no patchnutý bol aj ten ([zdroj](https://pastebin.com/XjypNaSr)):
-```javascript
-// Inicializácia jQuery:
-var jq=document.createElement("script");
-jq.src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
-document.getElementsByTagName("head")[0].appendChild(jq);
-jQuery.noConflict();
-
-var ziak = 2; // Ziak podla triedneho výkazu, treba experimentovať. 
-var cmd = "VysledkyPridelenia"; // MaterialPlayer pre vypracovanie testu ako ziak.
-var offset = 8; // Poradie ziaka, ktory skript vykonava, podla triedneho vykazu, aspon myslim. Treba experimentovat.
-jQuery('#bar_mainDiv > div > table > tbody > tr > td:first-child > a').each(function() {
-var strarr = $(this).attr("href").split("&");
-var testid = strarr[1].substr(7,strarr[1].length);
-var pridelenieid = (parseInt(strarr[2].substr(13,strarr[2].length)) - offset + ziak);
-console.log("testid: " + testid + ", pridelenieid: " + pridelenieid + ", ziak: " + ziak);
-$(this).attr("href", "/elearning/?cmd=" + cmd + "&testid=" + testid + "&pridelenieid=" + pridelenieid);
-});
-```
-
 ## Použite
 ### Chrome
 Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi tento návod: 
