@@ -16,7 +16,7 @@ materialObj.getAllAnswerWidgets().forEach(function (question) {
   } else if (question.getWidgetClass() == "InputAnswerETestWidget") {
     var correctAnswers = question.props.correctAnswers;
     for (id = 0; id < correctAnswers.length; id++) {
-      question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>" + correctAnswers[id] + " <button style='border: none; background: none; border-left: 2px solid #2196F3;' onclick='copy(`" + correctAnswers[id] + "`)'>Skopírovať</button></span><br><br>");
+      question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>" + correctAnswers[id] + " <button style='border: none; background: none; border-left: 2px solid #2196F3;' onclick='copy(`" + correctAnswers[id] + "`)'>Copy</button></span><br><br>");
     }
   } else if (question.getWidgetClass() == "ConnectAnswerETestWidget") {
     var correctAnswers = question.props.pairs;
