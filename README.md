@@ -1,29 +1,30 @@
 # EduPageTestHack
 Hack na správne odpovede
 
-## Použite
+## How to use
 ### Chrome
-Na Chrome Web Store sa bohužiaľ tento doplnok zadarmo dať nedá, preto použi tento návod: 
-- V novom tabe si otvor 'chrome://extensions'
-- V pravom hornom rohu zapni Developer Mode
-- Stiahni si [kód doplnku](https://github.com/ivanhrabcak/EduPageTestAnswers/archive/main.zip)
-- Zip súbor s kódom extrahuj na nejaké miesto na disku
-- V chrome vyber 'Load Unpacked' (v ľavom hornom rohu)
-- Vyber priečinok kde si extrahoval kód doplnku
-- Otvor test na Edupage
-- Klikni na ikonu doplnku Edupage
+We unfortunately can't get this addon to the chrome web store for free, so here's some steps: 
+- Open 'chrome://extensions' in a new tab
+- Turn on 'Developer Mode' in the top right corner 
+- Download the [code of this addon](https://github.com/ivanhrabcak/EduPageTestAnswers/archive/main.zip)
+- Extract the code to a place (it will have to stay there)
+- Select 'Load Unpacked' in chrome (top left corner)
+- Choose the folder that you've extracted the code to
+- Open the test on Edupage
+- Click Edupage's icon in the top right corner and the answers will be revealed.
 
-Pozor: 
-- ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
-- priecinok s kodom nevymazavaj! 
+Warning: 
+- If your test is paged, you will have to click the extension's icon every page
+- You can't remove the extension's code for it to work! 
 
 ### Firefox
-- Stiahni si [doplnok](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
-- Pokračuj v inštalácií v ľavom hornom rohu
-- Otvor Edupage test
-- Klikni na Edupage ikonu medzi doplnkami
+- Download our [extension from firefox addon store](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
+- Continue the installation in the left top corner
+- Open the test on edupage
+- Click the Edupage's icon
 
-Pozor: ak je test viac-stranový, musíš na ikonu kliknúť na každej strane.
+Warning:  
+- If your test is paged, you will have to click the extension's icon every page
 
 ## Bugs
-Ak doplnok nefunguje, nahlás všetky problémy na stránke [Issues](https://github.com/markotomcik/EduPageTestHack/issues/new/choose)
+If this extenstion is not working for you, or you've found any bug [open a new issue](https://github.com/markotomcik/EduPageTestHack/issues/new/choose), or pop a pull request
