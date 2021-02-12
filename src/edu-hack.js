@@ -1,53 +1,53 @@
-materialObj.getAllAnswerWidgets().forEach(function (otazka) {
-  if (otazka.getWidgetClass() == "AbcdAnswerETestWidget") {
-    var odpovede = otazka.alist[0];
+materialObj.getAllAnswerWidgets().forEach(function (question) {
+  if (question.getWidgetClass() == "AbcdAnswerETestWidget") {
+    var answers = question.alist[0];
     
-    if (odpovede == undefined) {
+    if (answers == undefined) {
       return;
     }
 
-    var spravne_odpovede = otazka.props.correctAnswers
-    for (answerid = 0; answerid < otazka.maxAnswerId; answerid++) {
-      if (odpovede.children[answerid] == undefined) continue;
-      if (spravne_odpovede.includes(odpovede.children[answerid].getAttribute("data-answerid"))) {
-        odpovede.children[answerid].style = 'border: 2px solid #2196F3;';
+    var correctAnswers = question.props.correctAnswers
+    for (answerid = 0; answerid < question.maxAnswerId; answerid++) {
+      if (answers.children[answerid] == undefined) continue;
+      if (correctAnswers.includes(answers.children[answerid].getAttribute("data-answerid"))) {
+        answers.children[answerid].style = 'border: 2px solid #2196F3;';
       }
     }
-  } else if (otazka.getWidgetClass() == "InputAnswerETestWidget") {
-    var spravne_odpovede = otazka.props.correctAnswers;
-    for (id = 0; id < spravne_odpovede.length; id++) {
-      otazka.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>" + spravne_odpovede[id] + " <button style='border: none; background: none; border-left: 2px solid #2196F3;' onclick='copy(`" + spravne_odpovede[id] + "`)'>Skopírovať</button></span><br><br>");
+  } else if (question.getWidgetClass() == "InputAnswerETestWidget") {
+    var correctAnswers = question.props.correctAnswers;
+    for (id = 0; id < correctAnswers.length; id++) {
+      question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>" + correctAnswers[id] + " <button style='border: none; background: none; border-left: 2px solid #2196F3;' onclick='copy(`" + correctAnswers[id] + "`)'>Skopírovať</button></span><br><br>");
     }
-  } else if (otazka.getWidgetClass() == "ConnectAnswerETestWidget") {
-    var spravne_odpovede = otazka.props.pairs;
-    var odpovede = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Správne odpovede:<ol style='list-style-type: decimal; padding-left: 30px;'>"
-    for (answerid = 0; answerid < spravne_odpovede.length; answerid++) {
-      odpovede += "<li>" + spravne_odpovede[answerid].l;
-      odpovede +=  spravne_odpovede[answerid].r + "</li>";
+  } else if (question.getWidgetClass() == "ConnectAnswerETestWidget") {
+    var correctAnswers = question.props.pairs;
+    var answers = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct answers:<ol style='list-style-type: decimal; padding-left: 30px;'>"
+    for (answerid = 0; answerid < correctAnswers.length; answerid++) {
+      answers += "<li>" + correctAnswers[answerid].l;
+      answers +=  correctAnswers[answerid].r + "</li>";
     }
-    odpovede += "</ol></div>"
-    otazka.element.before(odpovede);
-    otazka.element[0].style = "border: 2px solid #2196F3;";
-  } else if (otazka.getWidgetClass() == "OrderingAnswerETestWidget") {
-    var spravne_odpovede = otazka.props.answers;
-    var poradie = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Správne poradie:<ol style='list-style-type: decimal; padding-left: 30px;'>";
-    for (id = 0; id < spravne_odpovede.length; id++) {
-      poradie += "<li>" + spravne_odpovede[id].text + "</li>";
+    answers += "</ol></div>"
+    question.element.before(answers);
+    question.element[0].style = "border: 2px solid #2196F3;";
+  } else if (question.getWidgetClass() == "OrderingAnswerETestWidget") {
+    var correctAnswers = question.props.answers;
+    var order = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct order:<ol style='list-style-type: decimal; padding-left: 30px;'>";
+    for (id = 0; id < correctAnswers.length; id++) {
+      order += "<li>" + correctAnswers[id].text + "</li>";
     }
-    poradie += "</ol></div>";
-    otazka.element.before(poradie);
-    otazka.element[0].style = "border: 2px solid #2196F3; padding: 15px;";
+    order += "</ol></div>";
+    question.element.before(order);
+    question.element[0].style = "border: 2px solid #2196F3; padding: 15px;";
   } else {
-    otazka.element.before("<div style='background: red; color: white; padding: 5px;'>S touto otázkou ti nemôžem pomôcť</div>");
-    otazka.element[0].style = "border: 2px solid red;";
+    question.element.before("<div style='background: red; color: white; padding: 5px;'>I can't help you with this question...</div>");
+    question.element[0].style = "border: 2px solid red;";
   }
   
   });
 
   function copy(spravne_odpovede) {
     navigator.clipboard.writeText(spravne_odpovede).then(function () {
-      console.log('Skopírovanie úspešné!');
+      console.log('Copying successful!');
     }, function (err) {
-      console.error('Nastala chyba pri kopírovaní:  ', err);
+      console.error('There was an error while copying:  ', err);
   });
 }
