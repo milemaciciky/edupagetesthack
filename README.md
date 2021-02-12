@@ -1,5 +1,5 @@
 # EduPageTestHack
-Hack na správne odpovede
+Hack for correct answers on Edupage tests
 
 ## How to use
 ### Chrome
