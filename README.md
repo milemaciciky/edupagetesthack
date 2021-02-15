@@ -3,13 +3,7 @@ Hack for correct answers on Edupage tests
 
 ## How to use
 ### Chrome
-We unfortunately can't get this addon to the chrome web store for free, so here's some steps: 
-- Open 'chrome://extensions' in a new tab
-- Turn on 'Developer Mode' in the top right corner 
-- Download the [code of this addon](https://github.com/ivanhrabcak/EduPageTestAnswers/archive/main.zip)
-- Extract the code to a place (it will have to stay there)
-- Select 'Load Unpacked' in chrome (top left corner)
-- Choose the folder that you've extracted the code to
+- Download our [extension from chrome web store](https://chrome.google.com/webstore/detail/edupagetesthack/mpjlmnnbpcfaemadngfdjhpoikkblell)
 - Open the test on Edupage
 - Click Edupage's icon in the top right corner and the answers will be revealed.
 
