@@ -9,7 +9,6 @@ Hack for correct answers on Edupage tests
 
 Warning: 
 - If your test is paged, you will have to click the extension's icon every page
-- You can't remove the extension's code for it to work! 
 
 ### Firefox
 - Download our [extension from firefox addon store](https://addons.mozilla.org/sk/firefox/addon/edupagetesthack/)
