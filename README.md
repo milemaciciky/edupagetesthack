@@ -21,3 +21,6 @@ Warning:
 
 ## Bugs
 If this extenstion is not working for you, or you've found any bug [open a new issue](https://github.com/markotomcik/EduPageTestHack/issues/new/choose), or pop a pull request
+
+# Known issues
+https://github.com/markotomcik/EduPageTestHack/issues/8
