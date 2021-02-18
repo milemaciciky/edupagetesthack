@@ -1,4 +1,10 @@
 materialObj.getAllAnswerWidgets().forEach((question) => {
+    const warnSecured = (question) => {
+        if (question.props.isSecured == true) {
+            question.element.before(`<div style="background-color: red;">This question is secured, the answers might not be correct!</div>`);
+        }
+    };
+
     if (question.getWidgetClass() == "AbcdAnswerETestWidget") {
         const answers = question.props.correctAnswers;
 
@@ -12,6 +18,8 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
                 targetElements[k].style.border = "2px solid #2196F3";
             }
         }
+
+        warnSecured(question);
     }
     else if (question.getWidgetClass() == "InputAnswerETestWidget") { // old code
         const answers = question.props.correctAnswers;
@@ -24,6 +32,8 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         for (let i = 0; i < answers.length; i++) {
             question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: " + answers[i] + " </span><br><br></br>");
         }
+
+        warnSecured(question);
     }
     else if (question.getWidgetClass() == "OrderingAnswerETestWidget") {
         const answers = question.props.answers;
@@ -43,6 +53,8 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         output += "</div>";
 
         question.element.before(output);
+        
+        warnSecured(question);
     }
     else if (question.getWidgetClass() == "GroupsAnswerETestWidget") {
         const groups = question.props.groups;
@@ -60,6 +72,8 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         output += "</div>";
 
         question.element.before(output);
+
+        warnSecured(question);
     }
     else if (question.getWidgetClass() == "ConnectAnswerETestWidget") {
         const correctAnswers = question.props.pairs;
@@ -71,6 +85,8 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         output += "</ol></div>"
         question.element.before(output);
         question.element[0].style = "border: 2px solid #2196F3;";
+
+        warnSecured(question);
     }
     else if (question.getWidgetClass() == "MapAnswerETestWidget") {
         const points = question.props.points;
@@ -88,5 +104,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
                 point.style.backgroundColor = "";
             });
         }
+
+        warnSecured(question);
     }
 });
