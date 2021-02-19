@@ -24,3 +24,6 @@ If this extenstion is not working for you, or you've found any bug [open a new i
 
 # Known issues
 https://github.com/markotomcik/EduPageTestHack/issues/8
+
+## Discord
+https://discord.gg/ydqB2935me
