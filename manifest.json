@@ -1,6 +1,6 @@
 {
     "name": "EduPageTestHack",
-    "version": "1.1",
+    "version": "4.3",
     "description": "Get test answers easily",
     "web_accessible_resources": [
         "src/edu-hack.js"
