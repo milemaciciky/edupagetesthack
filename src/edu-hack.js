@@ -39,7 +39,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         const answers = question.props.answers;
 
         if (answers.length == 0) {
-            question.elements.before("<div style='background: red; color: white; padding: 5px;'>I can't find the answer to this question...</div>");
+            question.element.before("<div style='background: red; color: white; padding: 5px;'>I can't find the answer to this question...</div>");
             return;
         }
 
