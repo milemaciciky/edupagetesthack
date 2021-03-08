@@ -1,6 +1,6 @@
 {
     "name": "EduPageTestHack",
-    "version": "4.3",
+    "version": "4.4",
     "description": "Get test answers easily",
     "web_accessible_resources": [
         "src/edu-hack.js"
@@ -11,7 +11,6 @@
     "browser_action": {
         "default_title": "Click me to show test answers!",
         "default_icon": "icons/48.jpg"
-        
     },
     "background": {
         "scripts": ["src/initialize.js"],
