@@ -7,13 +7,14 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
 
     if (question.getWidgetClass() == "AbcdAnswerETestWidget") {
         const answers = question.props.correctAnswers;
+        const id = question.id;
 
         if (answers == undefined) {
             return;
         }
 
         for (let i = 0; i < answers.length; i++) {
-            const targetElements = document.querySelectorAll(`[data-answerid="${answers[i]}"]`);
+            const targetElements = document.querySelector(`[data-wid="${id}"]`).querySelectorAll(`[data-answerid="${answers[i]}"]`);
             for (let k = 0; k < targetElements.length; k++) {
                 targetElements[k].style.border = "2px solid #2196F3";
             }
