@@ -14,7 +14,12 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         }
 
         for (let i = 0; i < answers.length; i++) {
-            const targetElements = document.querySelector(`[data-wid="${id}"]`).querySelectorAll(`[data-answerid="${answers[i]}"]`);
+            const targetElements = document.querySelector(`[data-wid="${id}"]`)?.querySelectorAll(`[data-answerid="${answers[i]}"]`);
+            
+            if (targetElements == undefined) {
+                continue;
+            }
+            
             for (let k = 0; k < targetElements.length; k++) {
                 targetElements[k].style.border = "2px solid #2196F3";
             }
