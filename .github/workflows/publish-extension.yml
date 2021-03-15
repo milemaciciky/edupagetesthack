@@ -1,0 +1,19 @@
+name: Builds, signs and publishes the WebExtension
+
+on: workflow_dispatch
+
+jobs:
+  publish-to-amo:
+    name: Build and publish the extension
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and checkout source
+        uses: actions/checkout@master
+
+      - name: Sign the extension
+        uses: saphareas/sign-web-extension-action@master
+        with:
+          web-ext-id: "{7dae6ea5-3adc-485f-9712-5f9de863f85c}"
+          sign-listed: true
+          amo-api-key: ${{ secrets.FIREFOX_API_KEY }}
+          amo-api-secret: ${{ secrets.FIREFOX_API_SECRET }}
