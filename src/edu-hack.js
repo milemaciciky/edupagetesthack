@@ -35,9 +35,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
             return;
         } 
 
-        for (let i = 0; i < answers.length; i++) {
-            question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: " + answers[i] + " </span><br><br></br>");
-        }
+        question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: " + "\"" + answers.join("\" OR \"") + "\"" + " </span><br><br>");
 
         warnSecured(question);
     }
