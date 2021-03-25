@@ -1,7 +1,26 @@
+document.querySelectorAll('.edu-hack').forEach((answer) => {
+    if (answer.classList.contains("border")) {
+        answer.style.border = "";
+        answer.classList.remove("edu-hack", "border");
+    }
+    else {
+        answer.remove();
+    }
+});
+
 materialObj.getAllAnswerWidgets().forEach((question) => {
     const warnSecured = (question) => {
         if (question.props.isSecured == true) {
-            question.element.before(`<div style="background-color: red;">This question is secured, the answers might not be correct!</div>`);
+            question.element.before("<div class='edu-hack' style='background-color: red;'>This question is secured, the answers might not be correct!</div>");
+        }
+    };
+
+    const noAnswer = (question) => {
+        const answers = question.props.correctAnswers;
+
+        if (answers.length == 0) {
+            question.element.before("<div class='edu-hack' style='background-color: red; color: white; padding: 5px;'>I can't find the answer to this question...</div>");
+            return;
         }
     };
 
@@ -24,32 +43,25 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
 
             for (let k = 0; k < targetElements.length; k++) {
                 targetElements[k].style.border = "2px solid #2196F3";
+                targetElements[k].classList.add("edu-hack", "border");
             }
         }
     }
     else if (question.getWidgetClass() == "InputAnswerETestWidget") { // old code
         const answers = question.props.correctAnswers;
 
-        if (answers.length == 0) {
-            question.element.before("<div style='background: red; color: white; padding: 5px;'>I can't find the answer to this question...</div>");
-            return;
-        }
-
+        noAnswer(question);
         warnSecured(question);
 
-        question.element.before("<br><br><span style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: " + "\"" + answers.join("\" OR \"") + "\"" + " </span><br><br>");
+        question.element.before(`<br class='edu-hack'><br class='edu-hack'><span class='edu-hack' style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: "` + answers.join(`" OR "`) + `" </span><br class='edu-hack'><br class='edu-hack'>`);
     }
     else if (question.getWidgetClass() == "OrderingAnswerETestWidget") {
         const answers = question.props.answers;
 
-        if (answers.length == 0) {
-            question.element.before("<div style='background: red; color: white; padding: 5px;'>I can't find the answer to this question...</div>");
-            return;
-        }
-
+        noAnswer(question);
         warnSecured(question);
 
-        let output = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct order:<ol style='list-style-type: decimal; padding-left: 30px;'>";
+        let output = "<div class='edu-hack' style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct order:<ol style='list-style-type: decimal; padding-left: 30px;'>";
 
         for (let i = 0; i < answers.length; i++) {
             const answerText = answers[i].text;
@@ -65,7 +77,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
 
         warnSecured(question);
 
-        let output = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct grouping:<div>"
+        let output = "<div class='edu-hack' style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct grouping:<div>"
         for (let i = 0; i < groups.length; i++) {
             const group = groups[i].items;
 
@@ -85,7 +97,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
 
         warnSecured(question);
 
-        let output = "<div style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct answers:<ol style='list-style-type: decimal; padding-left: 30px;'>"
+        let output = "<div class='edu-hack' style='background-color: #2196F3; color: white; padding: 5px; margin: 0;'>Correct answers:<ol style='list-style-type: decimal; padding-left: 30px;'>"
 
         for (answerid = 0; answerid < correctAnswers.length; answerid++) {
             output += `<li> ${correctAnswers[answerid].l}`;
@@ -95,6 +107,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
 
         question.element.before(output);
         question.element[0].style = "border: 2px solid #2196F3;";
+        question.element[0].classList.add("edu-hack", "border");
     }
     else if (question.getWidgetClass() == "MapAnswerETestWidget") {
         const points = question.props.points;
