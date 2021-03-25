@@ -53,7 +53,7 @@ materialObj.getAllAnswerWidgets().forEach((question) => {
         noAnswer(question);
         warnSecured(question);
 
-        question.element.before(`<br class='edu-hack'><br class='edu-hack'><span class='edu-hack' style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: "` + answers.join(`" OR "`) + `" </span><br><br>`);
+        question.element.before(`<br class='edu-hack'><br class='edu-hack'><span class='edu-hack' style='border: 2px solid #2196F3; background: white; color: black; padding: 5px; margin: 5px;'>Answer: "` + answers.join(`" OR "`) + `" </span><br class='edu-hack'><br class='edu-hack'>`);
     }
     else if (question.getWidgetClass() == "OrderingAnswerETestWidget") {
         const answers = question.props.answers;
