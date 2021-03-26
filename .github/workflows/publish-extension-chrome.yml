@@ -10,21 +10,18 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    steps:
-      - name: Test
-        run: ls
-        
-      - name: Test 2
-        run: find
-        
+    steps:        
       - name: action-zip
         uses: montudor/action-zip@v0.1.1
         with:
           # See montudor/action-zip README.md for more info
-          args: zip -qq -r extension.zip src
-
-      - name: Test after zipping
-        run: ls
+          args: zip -qq -r extension.zip . -i src
+          
+      - name: action-zip
+        uses: montudor/action-zip@v0.1.1
+        with:
+          # See montudor/action-zip README.md for more info
+          args: unzip -l extension.zip
         
       - name: Chrome Extension upload & publish
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
