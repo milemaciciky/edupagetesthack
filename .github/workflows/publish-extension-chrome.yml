@@ -15,7 +15,7 @@ jobs:
         run: ls
         
       - name: Test 2
-        run: find . | grep "src"
+        run: find
         
       - name: action-zip
         uses: montudor/action-zip@v0.1.1
