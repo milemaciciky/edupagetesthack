@@ -1,6 +1,8 @@
 # EduPageTestHack
 Hack for correct answers on Edupage tests
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=92FTTDA7ZLUWS)
+
 ## How to use
 ### Chrome
 - Download our [extension from chrome web store](https://chrome.google.com/webstore/detail/edupagetesthack/mpjlmnnbpcfaemadngfdjhpoikkblell)
