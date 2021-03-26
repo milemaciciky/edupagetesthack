@@ -8,17 +8,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Test
+        run: ls -la
+        
       - name: action-zip
         uses: montudor/action-zip@v0.1.1
         with:
           # See montudor/action-zip README.md for more info
           args: zip -qq -r extension.zip . -i ./
-  upload:
-    runs-on: ubuntu-latest
-    steps:
+
+      - name: Test after zipping
+        run: ls -la
+        
       - name: Chrome Extension upload & publish
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
         with:
@@ -31,7 +35,7 @@ jobs:
           # Token client secret
           client-secret: 0
           # Name of zipped target upload file
-          file-name: 0
+          file-name: ./extension.zip
           # True Or False to publish after upload
           publish: True
         
