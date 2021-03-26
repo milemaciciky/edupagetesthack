@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: ls -la
+        run: ls
+        
+      - name: Test 2
+        run: find . | grep "src"
         
       - name: action-zip
         uses: montudor/action-zip@v0.1.1
@@ -21,7 +24,7 @@ jobs:
           args: zip -qq -r extension.zip . -i ./
 
       - name: Test after zipping
-        run: ls -la
+        run: ls
         
       - name: Chrome Extension upload & publish
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
