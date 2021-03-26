@@ -21,7 +21,7 @@ jobs:
         uses: montudor/action-zip@v0.1.1
         with:
           # See montudor/action-zip README.md for more info
-          args: zip -qq -r extension.zip . -i ./
+          args: zip -qq -r extension.zip src
 
       - name: Test after zipping
         run: ls
