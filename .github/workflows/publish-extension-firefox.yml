@@ -1,4 +1,4 @@
-name: Builds, signs and publishes the WebExtension
+name: Build, sign and publishe the extension to Firefox Addon Store
 
 on: workflow_dispatch
 
