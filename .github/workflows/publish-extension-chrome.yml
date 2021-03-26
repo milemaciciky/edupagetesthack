@@ -1,0 +1,37 @@
+name: Build and publish the extension to Chrome Webstore
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: action-zip
+        uses: montudor/action-zip@v0.1.1
+        with:
+          # See montudor/action-zip README.md for more info
+          args: zip -qq -r extension.zip ./
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chrome Extension upload & publish
+        uses: Passiverecords/chrome-extension-upload-action@1.4.1
+        with:
+          # Auth refresh token
+          refresh-token: 0
+          # Extension application target id
+          app-id: 0
+          # Token client id
+          client-id: 0
+          # Token client secret
+          client-secret: 0
+          # Name of zipped target upload file
+          file-name: 0
+          # True Or False to publish after upload
+          publish: True
+        
