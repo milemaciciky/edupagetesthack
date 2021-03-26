@@ -1,7 +1,7 @@
 # EduPageTestHack
 Hack for correct answers on Edupage tests
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=92FTTDA7ZLUWS)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=DJJCSJJ8Q72YG)
 
 ## How to use
 ### Chrome
